@@ -8,15 +8,16 @@ function BudgetProvider({ children }) {
   const handleBudget = () => setBudgetMode(!budgetMode);
 
   const budgetBtnContenct = (budgetMode) ?
-    <><i className="bi bi-toggle-off"></i> Attiva Modalità Budget</>
-    :
-    <><i className="bi bi-toggle-on"></i> Disattiva Modalità Budget</>;
+  <><i className="bi bi-toggle-on"></i> Disattiva Modalità Budget</>
+  :
+  <><i className="bi bi-toggle-off"></i> Attiva Modalità Budget</>;
 
-  console.log(budgetMode);
+  //console.log(budgetMode);
   
   useEffect(() => {
     console.log('lo stato è cambiato');
     
+    //⚠️ qui manca la logica, bisognerebbe spostarla qui dentro
 
   }, [budgetMode])
 
