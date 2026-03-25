@@ -123,7 +123,8 @@ main {
 
 
     .card.col {
-      background-color: var(--custom-primary-light);
+      /* background-color: var(--custom-primary-light); */
+      background-color: transparent;
       border-radius: 40px;
       border: none;
       /* margin: 1rem; */
@@ -150,7 +151,7 @@ main {
       }
 
       .card-img-top {
-        background-color: var(--custom-secondary-light);
+        /* background-color: var(--custom-secondary-light); */
         border-radius: 30px;
         width: 100%;
         aspect-ratio: 1 / 1;
@@ -164,8 +165,8 @@ main {
 
         .price {
           color: var(--custom-secondary-light);
-          background-color: #09263079;
-          font-size: 2rem;
+          background-color: #09263093;
+          font-size: 1.5rem;
           font-weight: 700;
           padding: 0.5rem 1.5rem;
           border-radius: 20px;
@@ -208,6 +209,7 @@ main {
   /*#endregion Products page */
 
   /*#region 👖 SingleProduct page (details page) */
+  /* ⚠️ layout and responsiveness -> to fix */
 
   .container_product_page {
     margin: 2.5rem auto;
@@ -310,126 +312,124 @@ main {
           font-weight: 700;
         }
 
-        .profile_role {}
+        /*         .profile_role {}
+      } */
+
+        .profile_vibe {
+          color: var(--custom-primary-dark);
+          font-weight: 700;
+          text-align: center;
+          font-size: small;
+          padding: 0 1.5rem;
+        }
+
       }
-
-      .profile_vibe {
-        color: var(--custom-primary-dark);
-        font-weight: 700;
-        text-align: center;
-        font-size: small;
-        padding: 0 1.5rem;
-      }
-
-    }
-
-    img {
-      height: 120px;
-      width: 120px;
-      border: 3px solid #60a3b9c4;
-      background-color: var(--custom-primary-dark);
-      border-radius: 50%;
-      position: absolute;
-      bottom: -10%;
-      align-self: center;
-      /* box-shadow: 2px 2px 10px var(--custom-primary-dark); */
-    }
-
-  }
-
-  .card-body.member-bio-info {
-    /* background-color: var(--custom-primary-light); */
-    padding: 2.5rem;
-    padding-bottom: 1.5rem;
-    border: none;
-    display: flex;
-    gap: 2rem;
-
-    .profile_role {
-      text-align: left;
-      width: 60%;
-    }
-
-    .profile_fun {
-      align-self: center;
-      border: 4px dashed var(--custom-primary-light);
-      border-radius: 40% 40% 60% 60% / 60% 50% 80% 35%;
-      font-size: 0.8rem;
-      padding: 1.5rem;
-    }
-  }
-
-
-  .container-fluid.we_are {
-    background-color: var(--custom-primary-light);
-    padding: 2rem 0 1.5rem 0;
-  }
-
-  .container-fluid.ethics {
-    padding: 2rem 0 1.5rem 0;
-
-    ::marker {
-      color: var(--custom-primary-dark);
-    }
-
-    span {
-      font-weight: 600;
-    }
-  }
-
-  /*#endregion About us page */
-
-}
-
-
-/* Footer */
-
-footer {
-  background: var(--custom-primary-dark);
-  color: var(--custom-dark);
-
-  div.top_footer {
-    background-color: var(--custom-dark);
-    color: var(--custom-primary-dark);
-    padding: 2rem 0;
-
-
-    .container {
-      gap: 2rem;
-      justify-content: space-between;
-    }
-
-    .ai_chat {
-      background-color: var(--custom-primary-dark);
-      border-radius: 10px;
-      color: var(--custom-dark);
-      padding: 0.5rem;
-      margin-top: 1rem;
-    }
-
-    .app {
 
       img {
-        margin-bottom: 0.5rem;
+        height: 120px;
+        width: 120px;
+        border: 3px solid #60a3b9c4;
+        background-color: var(--custom-primary-dark);
+        border-radius: 50%;
+        position: absolute;
+        bottom: -10%;
+        align-self: center;
+        /* box-shadow: 2px 2px 10px var(--custom-primary-dark); */
+      }
+
+    }
+
+    .card-body.member-bio-info {
+      /* background-color: var(--custom-primary-light); */
+      padding: 2.5rem;
+      padding-bottom: 1.5rem;
+      border: none;
+      display: flex;
+      gap: 2rem;
+
+      .profile_role {
+        text-align: left;
+        width: 60%;
+      }
+
+      .profile_fun {
+        align-self: center;
+        border: 4px dashed var(--custom-primary-light);
+        border-radius: 40% 40% 60% 60% / 60% 50% 80% 35%;
+        font-size: 0.8rem;
+        padding: 1.5rem;
+      }
+    }
+
+    .container-fluid.we_are {
+      background-color: var(--custom-primary-light);
+      padding: 2rem 0 1.5rem 0;
+    }
+
+    .container-fluid.ethics {
+      padding: 2rem 0 1.5rem 0;
+
+      ::marker {
+        color: var(--custom-primary-dark);
+      }
+
+      span {
+        font-weight: 600;
+      }
+    }
+    
+  }
+  /*#endregion About us page */
+}
+
+  /* Footer */
+
+  footer {
+    background: var(--custom-primary-dark);
+    color: var(--custom-dark);
+
+    div.top_footer {
+      background-color: var(--custom-dark);
+      color: var(--custom-primary-dark);
+      padding: 2rem 0;
+
+
+      .container {
+        gap: 2rem;
+        justify-content: space-between;
+      }
+
+      .ai_chat {
+        background-color: var(--custom-primary-dark);
+        border-radius: 10px;
+        color: var(--custom-dark);
+        padding: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .app {
+
+        img {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+    }
+
+    div.bottom_footer {
+
+      align-items: center;
+      padding: 1% 0;
+
+      span.brand {
+        font-family: "Miltonian Tattoo", serif;
+        font-size: 1.5rem;
+      }
+
+      ul {
+        gap: 2rem;
+        margin-bottom: 0;
       }
     }
 
   }
-
-  div.bottom_footer {
-
-    align-items: center;
-    padding: 1% 0;
-
-    span.brand {
-      font-family: "Miltonian Tattoo", serif;
-      font-size: 1.5rem;
-    }
-
-    ul {
-      gap: 2rem;
-      margin-bottom: 0;
-    }
-  }
-
-}

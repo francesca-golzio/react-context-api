@@ -34,11 +34,11 @@ export default function SingleProduct() {
   return (
     <>
       <main>
-        <div className="container-fluid debug">
+        <div className="container-fluid">
           <div className='product_img col-12'>
             <div className='product_classification col-12 '>
               <div className='product_category'>{`# ${category}`}</div>
-              <div className='product_rating debug'>
+              <div className='product_rating'>
                 <i className="bi bi-star-fill"></i> {`${rating.rate} (${rating.count})`}
               </div>
             </div>
