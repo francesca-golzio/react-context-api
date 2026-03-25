@@ -65,18 +65,16 @@ a {
     border-radius: 50px;
   }
 
-  /* Search bar */
-  /* #nav_search {
-    color: var(--custom-primary-dark);
+  /* budget button */
+  .budget_button {
+    background-color: transparent;
+    border: none;
+    padding: 8px 0;
+    background-color: var(--custom-gray);
+    border-radius: 50px;
+    width: 100%;
+    min-width: fit-content;
   }
-
-  .search_btn {
-    background-color: var(--custom-secondary-light);
-  }
-
-  ::placeholder {
-    color: var(--custom-primary-dark);
-  } */
 
   /* Toggler */
   .navbar-toggler {
@@ -232,8 +230,8 @@ main {
         justify-content: space-between;
         position: absolute;
         top: 0;
-        
-        .product_category{
+
+        .product_category {
           background-color: var(--custom-dark);
 
         }
