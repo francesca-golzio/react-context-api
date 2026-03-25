@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useBudget } from '../contexts/BudgetContext';
 
 
 function Products() {
@@ -18,7 +19,9 @@ function Products() {
       .catch(error => console.log(error))
   }
 
-  useEffect(FetchProdotti, [])
+  useEffect(FetchProdotti, []);
+
+  const { budgetMode, setBudgetMode, handleBudget } = useBudget();
 
   return (
     <>
