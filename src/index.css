@@ -1,0 +1,437 @@
+/* Import external frameworks */
+@import url('bootstrap');
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&family=Miltonian+Tattoo&display=swap');
+
+/* Import icons */
+@import "bootstrap-icons/font/bootstrap-icons";
+
+:root {
+  --custom-primary-light: #add8e6;
+  --custom-primary-dark: #60a3b9;
+  --custom-secondary-light: #faebd7;
+  --custom-dark: #092630;
+  --custom-gray: #e8e8e4;
+  --white: #fff;
+}
+
+.debug {
+  border: 1px dashed fuchsia;
+}
+
+/* Commons */
+
+svg.siteLogo {
+  height: 2rem;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--custom-gray);
+  font-family: 'Quicksand Variable', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+
+.navbar {
+  background-color: var(--custom-primary-light);
+  color: var(--custom-dark);
+
+  #navbarScroll.navbar-collapse.collapse.show {
+    max-width: 250px;
+    text-align: center;
+    /* ⚠️ da capire come allinearlo a dx */
+  }
+
+  h1 {
+    color: var(--custom-dark);
+    font-family: "Miltonian Tattoo", serif;
+  }
+
+  /* from Bootsrap inline style */
+  .navbar-nav-scroll {
+    --bsScrollHeight: 100px;
+  }
+
+  /* Active nav item */
+  .active {
+    background-color: var(--custom-secondary-light);
+    border-radius: 50px;
+  }
+
+  /* Search bar */
+  /* #nav_search {
+    color: var(--custom-primary-dark);
+  }
+
+  .search_btn {
+    background-color: var(--custom-secondary-light);
+  }
+
+  ::placeholder {
+    color: var(--custom-primary-dark);
+  } */
+
+  /* Toggler */
+  .navbar-toggler {
+    background-color: var(--custom-secondary-light);
+    border-radius: 50px;
+  }
+
+}
+
+/* Main */
+
+main {
+
+  /*#region 🏠 Home page */
+
+  .container-fluid.we_are_home {
+    padding: 2rem 0;
+
+
+    svg {
+      height: 150px;
+      flex-shrink: 0;
+    }
+  }
+
+  .yUs {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .container.home_stay {
+    margin: 0 auto;
+
+  }
+
+  /*#endregion Home page */
+
+  /*#region 👕👖 Products page */
+  .container.products_page {
+    padding: 2rem 0;
+  }
+
+  .card_deck {
+    justify-content: space-evenly;
+    gap: 2rem;
+
+
+    .card.col {
+      background-color: var(--custom-primary-light);
+      border-radius: 40px;
+      border: none;
+      /* margin: 1rem; */
+      padding: 1rem;
+      /* padding-top: 12px; */
+      width: 320px;
+      max-height: 500px;
+      position: relative;
+
+      .label {
+        background-color: var(--custom-dark);
+        color: var(--custom-secondary-light);
+        font-size: 0.8rem;
+        border-radius: 50px;
+        padding: 0.5rem 1rem;
+        position: absolute;
+        left: -1.2rem;
+        top: 0.5rem;
+        z-index: 10;
+
+        i {
+          color: var(--custom-primary-dark);
+        }
+      }
+
+      .card-img-top {
+        background-color: var(--custom-secondary-light);
+        border-radius: 30px;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        padding: 1.5rem;
+
+      }
+
+      .card-body {
+        height: 150px;
+
+        .price {
+          color: var(--custom-secondary-light);
+          background-color: #09263079;
+          font-size: 2rem;
+          font-weight: 700;
+          padding: 0.5rem 1.5rem;
+          border-radius: 20px;
+          position: absolute;
+          bottom: 180px;
+          right: 1.8rem;
+          z-index: 10;
+        }
+
+        div.product_link {
+          font-size: 0.8rem;
+          font-style: italic;
+          font-weight: 600;
+          color: var(--custom-dark);
+          text-decoration: underline;
+          text-align: right;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .card-title {
+        /* font-family: 'Comic Mono', monospace; */
+        /* text-align: center; */
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      /* ⚠️ gestire meglio overflow */
+      /* .card-text {
+        max-height: 1.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      } */
+
+
+    }
+  }
+
+
+  /*#endregion Products page */
+
+  /*#region 👖 SingleProduct page (details page) */
+
+  .container_product_page {
+    margin: 2.5rem auto;
+    text-align: center;
+
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product_img {
+      max-width: 100vw;
+      position: relative;
+
+      .product_classification {
+        color: var(--custom-primary-dark);
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        
+        .product_category{
+          background-color: var(--custom-dark);
+
+        }
+      }
+    }
+
+    .product_title {
+      font-family: "Miltonian Tattoo", serif;
+      font-size: 3.5rem;
+      /* color: var(--custom-dark); */
+      color: var(--custom-primary-dark);
+      background-color: var(--custom-dark);
+      text-align: center;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .product_description {
+
+      max-width: 650px;
+      padding: 1rem;
+      margin: 1 1.5rem;
+    }
+
+    .product_price {
+      color: var(--custom-primary-dark);
+      font-size: 2.5rem;
+    }
+
+  }
+
+  /*#endregion SingleProduct page (details page) */
+
+  /*#region 🙋‍♂️ About us page */
+
+  .container.meet_crew {
+    padding: 2rem 0 1.5rem 0;
+
+  }
+
+  .card.crew-card {
+    border: none;
+    /* box-shadow: 2px 2px 20px var(--custom-primary-light); */
+    border-radius: 30px 50px 25px 40px;
+
+    .card-header {
+      /* background-color: var(--custom-secondary-light); */
+      background-color: transparent;
+      color: var(--custom-dark);
+      display: flex;
+      flex-direction: column;
+      padding-top: 1rem;
+      padding-right: 1.5rem;
+      padding-bottom: 3rem;
+      padding-left: 1.5rem;
+      border-radius: 0 0 30px 0;
+      border: none;
+      position: relative;
+
+      h3 {
+        font-family: "Miltonian Tattoo", serif;
+        font-size: 2.5rem;
+        color: var(--custom-dark);
+        text-align: center;
+        padding-bottom: 1rem;
+      }
+
+      .profile_titles {
+        color: var(--custom-primary-dark);
+        width: 120%;
+        padding-right: 1.5rem;
+
+        .profile_title {
+          font-weight: 700;
+        }
+
+        .profile_role {}
+      }
+
+      .profile_vibe {
+        color: var(--custom-primary-dark);
+        font-weight: 700;
+        text-align: center;
+        font-size: small;
+        padding: 0 1.5rem;
+      }
+
+    }
+
+    img {
+      height: 120px;
+      width: 120px;
+      border: 3px solid #60a3b9c4;
+      background-color: var(--custom-primary-dark);
+      border-radius: 50%;
+      position: absolute;
+      bottom: -10%;
+      align-self: center;
+      /* box-shadow: 2px 2px 10px var(--custom-primary-dark); */
+    }
+
+  }
+
+  .card-body.member-bio-info {
+    /* background-color: var(--custom-primary-light); */
+    padding: 2.5rem;
+    padding-bottom: 1.5rem;
+    border: none;
+    display: flex;
+    gap: 2rem;
+
+    .profile_role {
+      text-align: left;
+      width: 60%;
+    }
+
+    .profile_fun {
+      align-self: center;
+      border: 4px dashed var(--custom-primary-light);
+      border-radius: 40% 40% 60% 60% / 60% 50% 80% 35%;
+      font-size: 0.8rem;
+      padding: 1.5rem;
+    }
+  }
+
+
+  .container-fluid.we_are {
+    background-color: var(--custom-primary-light);
+    padding: 2rem 0 1.5rem 0;
+  }
+
+  .container-fluid.ethics {
+    padding: 2rem 0 1.5rem 0;
+
+    ::marker {
+      color: var(--custom-primary-dark);
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  /*#endregion About us page */
+
+}
+
+
+/* Footer */
+
+footer {
+  background: var(--custom-primary-dark);
+  color: var(--custom-dark);
+
+  div.top_footer {
+    background-color: var(--custom-dark);
+    color: var(--custom-primary-dark);
+    padding: 2rem 0;
+
+
+    .container {
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    .ai_chat {
+      background-color: var(--custom-primary-dark);
+      border-radius: 10px;
+      color: var(--custom-dark);
+      padding: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .app {
+
+      img {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+  }
+
+  div.bottom_footer {
+
+    align-items: center;
+    padding: 1% 0;
+
+    span.brand {
+      font-family: "Miltonian Tattoo", serif;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      gap: 2rem;
+      margin-bottom: 0;
+    }
+  }
+
+}
