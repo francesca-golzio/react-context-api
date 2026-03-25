@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 export default function SingleProduct() {
   //const { id, title, price, description, category, image, rating } = useParams();
   const { id } = useParams();
-  console.log(id);
+  //console.log(id);
   const product_api = `https://fakestoreapi.com/products/${id}`
   const [fetchedProduct, setFetchedProduct] = useState(null);
 
@@ -13,8 +13,8 @@ export default function SingleProduct() {
     fetch(product_api)
       .then(res => res.json())
       .then(prodotto => {
-        console.log('🟢', prodotto, id);
-        console.log('🟢', id);
+        //console.log('🟢', prodotto, id);
+        //console.log('🟢', id);
         setFetchedProduct(prodotto)
       })
       .catch((error) => console.log(error));
@@ -23,7 +23,7 @@ export default function SingleProduct() {
 
   /*   if(fetchedProduct === null) { */
   if (!fetchedProduct) {
-    console.log('loading');
+    //console.log('loading');
     return (
       <div>loading</div>
     )
